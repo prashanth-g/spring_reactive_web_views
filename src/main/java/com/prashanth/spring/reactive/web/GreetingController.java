@@ -14,8 +14,8 @@ public class GreetingController {
     private final GreetingsProducer greetingsProducer;
 
     @GetMapping(value = "/greetings/{name}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    Publisher<Greeting> greet(@PathVariable String name) {
-        return this.greetingsProducer.greet(name);
+    Publisher<String> greet(@PathVariable String name) {
+        return this.greetingsProducer.greet(name).map(Greeting::getMessage);
     }
 
 }
