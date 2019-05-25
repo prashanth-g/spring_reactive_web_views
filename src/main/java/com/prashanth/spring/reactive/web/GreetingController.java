@@ -1,5 +1,6 @@
 package com.prashanth.spring.reactive.web;
 
+import com.prashanth.spring.reactive.web.model.Greeting;
 import lombok.RequiredArgsConstructor;
 import org.reactivestreams.Publisher;
 import org.springframework.http.MediaType;
