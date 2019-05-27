@@ -6,9 +6,18 @@
 </head>
 <body>
 <div id="greetings-block">
-    <h1 data-th-each="greeting : ${greetings}">
-        [[ ${greeting} ]]
+    <h1 style="color:green" data-th-each="greeting : ${greetings}">
+        [[ ${greeting.message} ]]
     </h1>
 </div>
+<script>
+         window.addEventListener('load', function(event) {
+            var es = new EventSource('http://localhost:8080/greetings-view.do/' + name);
+            var update = document.getElementById('greetings-block');
+            es.addEventListener('message', function(message) {
+                update.innerHTML = message.data;
+            });
+        });
+</script>
 </body>
 </html>
