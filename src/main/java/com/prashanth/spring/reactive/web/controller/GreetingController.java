@@ -1,5 +1,6 @@
-package com.prashanth.spring.reactive.web;
+package com.prashanth.spring.reactive.web.controller;
 
+import com.prashanth.spring.reactive.web.GreetingsProducer;
 import com.prashanth.spring.reactive.web.model.Greeting;
 import lombok.RequiredArgsConstructor;
 import org.reactivestreams.Publisher;

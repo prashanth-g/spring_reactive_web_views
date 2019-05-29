@@ -1,5 +1,6 @@
-package com.prashanth.spring.reactive.web;
+package com.prashanth.spring.reactive.web.controller;
 
+import com.prashanth.spring.reactive.web.GreetingsProducer;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
